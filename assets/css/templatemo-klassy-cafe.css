@@ -290,11 +290,11 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #fb5849 !important;
+  color: red !important;
 }
 
 .background-header .nav li a.active {
-  color: #fb5849 !important;
+  color: red !important;
 }
 
 .header-area {
@@ -662,8 +662,8 @@ header
     line-height: 50px !important;
     padding: 0px !important;
     border: none !important;
-    background: #f7f7f7 !important;
-    color: #191a20 !important;
+    background: black !important;
+    color: white !important;
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
@@ -1027,7 +1027,7 @@ menu
 */
 
 #menu {
-  margin-top: 120px;
+  margin-top: 0px;
   background-color: black;
   padding: 120px 0px;
 }
@@ -1325,14 +1325,17 @@ reservation
 }
 
 #reservation {
-  margin-top: 120px;
-  padding: 120px 0px;
+  margin-top: 20px;
+  padding: 50px 0px;
   background-image: url(../images/reservation-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+#reservation .message {
+  margin-right: 0px;
+}
 #reservation .phone,
 #reservation .message {
   background-color: #fff;
@@ -1375,7 +1378,7 @@ reservation
 
 #reservation .phone span a:hover,
 #reservation .message span a:hover {
-  color: #fb5849;
+  color: red;
 }
 
 #contact {
@@ -1672,18 +1675,36 @@ responsive
   }
   #top .left-content {
     text-align: center;
-    padding: 25% 0px;
+    padding: 35% 80px;
   }
   #about .right-content {
     margin-left: 0px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   #chefs .chef-item {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   #reservation .phone {
     margin-bottom: 60px;
   }
+
+  #reservation .message {
+    margin-bottom: 60px;
+  }
+
+  #reservation {
+    padding: 50px 0px 50px 0px;
+  }
+
+  .row iframe {
+    position: center;
+    margin-right: 20px;
+  }
+
+  #menu {
+    margin-top: 0px;
+  }
+
   #contact {
     margin-left: 0px;
     margin-top: 30px;
@@ -1784,7 +1805,7 @@ responsive
   }
 }
 
-.map-responsive {
+/* .map-responsive {
   overflow: hidden;
   padding-bottom: 100%;
   position: relative;
@@ -1797,4 +1818,10 @@ responsive
   height: 100%;
   width: 100%;
   position: absolute;
+} */
+
+.row iframe {
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 75px;
 }
