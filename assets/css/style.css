@@ -450,7 +450,7 @@ header
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
   background: #fff;
-  color: #fb5849 !important;
+  color: red !important;
   padding-left: 25px;
 }
 
@@ -490,7 +490,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #1e1e1e;
+  background-color: white;
   display: block;
   position: absolute;
   width: 30px;
@@ -501,7 +501,7 @@ header
 .background-header .main-nav .menu-trigger span,
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #1e1e1e;
+  background-color: white !important;
 }
 
 .header-area .main-nav .menu-trigger span:before,
@@ -510,7 +510,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #1e1e1e;
+  background-color: white !important;
   display: block;
   position: absolute;
   width: 30px;
@@ -626,7 +626,7 @@ header
     padding: 0px;
   }
   .header-area .logo {
-    margin-left: 30px;
+    margin-left: 0px;
   }
   .header-area .menu-trigger {
     display: block !important;
@@ -725,8 +725,10 @@ banner
 }
 
 #top .left-content {
-  background-image: url(https://media.istockphoto.com/id/1129067043/vector/japanese-vintage-pattern-background-with-sakura-plum-flower-and-cloud.jpg?s=612x612&w=0&k=20&c=A2F_zTlUTv0MPHZUKhOOhk8KM8OHZgNLQMgmj5hTYcU=);
-  background-position: center center;
+  background-image: url(../images/top-left.png);
+  filter: contrast(1.1);
+  filter: brightness(1.08);
+  background-position: left center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -828,7 +830,7 @@ banner
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: #fb5849;
+  background-color: red;
   border: 0 none;
   line-height: 44px;
   border-radius: 50%;
@@ -857,7 +859,7 @@ banner
   left: 30px;
   width: 50px;
   height: 50px;
-  background-color: #fb5849;
+  background-color: red;
   border: 0 none;
   line-height: 44px;
   border-radius: 50%;
@@ -1044,6 +1046,9 @@ menu
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  background-color: black;
+  border-radius: 5px;
+  border: 3px;
 }
 
 .card1 {
@@ -1075,7 +1080,6 @@ menu
 .card:hover .info:before {
   transform: translateY(200px) translateZ(0);
 }
-
 .title {
   margin: 0;
   padding: 30px 30px 20px 30px;
@@ -1085,7 +1089,9 @@ menu
 }
 
 .description {
-  padding: 0px 30px;
+  padding: 0px 0px;
+  padding-left: 30px;
+  text-align: left;
   color: #fff;
 }
 
@@ -1096,7 +1102,7 @@ menu
   background-color: red;
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: white;
   border-radius: 3px;
   text-align: center;
   line-height: 70px;
@@ -1110,6 +1116,7 @@ menu
 
 #menu .owl-menu-item {
   position: relative;
+  background-color: #000;
 }
 
 #menu .owl-nav {
@@ -1316,7 +1323,7 @@ reservation
 }
 
 #reservation .section-heading h6:before {
-  background-color: #fff;
+  background-color: red;
 }
 
 #reservation p {
@@ -1473,7 +1480,7 @@ offers
 */
 
 #offers {
-  padding-top: 120px;
+  padding-top: 60px;
 }
 
 #offers .section-heading {
@@ -1593,7 +1600,7 @@ footer
 
 footer {
   margin-top: 60px;
-  padding: 50px 0px;
+  padding: 25px 0px;
   background-color: red;
 }
 
@@ -1653,12 +1660,12 @@ footer .right-text-content ul li a:hover {
 responsive
 --------------------------------------------- 
 */
-
 @media (max-width: 992px) {
   #top {
     padding-top: 100px;
     height: auto;
   }
+
   .header-area .main-nav .nav li.submenu:after {
     right: 3px;
   }
@@ -1675,8 +1682,17 @@ responsive
   }
   #top .left-content {
     text-align: center;
-    padding: 35% 80px;
+    padding: 35%;
   }
+
+  .Modern-Slider .item .img-fill {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    background: #000;
+    background-color: black;
+  }
+
   #about .right-content {
     margin-left: 0px;
     margin-top: 20px;
@@ -1696,13 +1712,14 @@ responsive
     padding: 50px 0px 50px 0px;
   }
 
-  .row iframe {
-    position: center;
-    margin-right: 20px;
-  }
-
   #menu {
     margin-top: 0px;
+  }
+
+  .row iframe {
+    height: 500px;
+    width: 680px;
+    margin-right: 20px;
   }
 
   #contact {
@@ -1715,6 +1732,11 @@ responsive
 
   #offers .tabs-content .right-list {
     margin-left: 0px;
+  }
+
+  footer {
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
   footer .right-text-content {
     text-align: center;
@@ -1804,21 +1826,6 @@ responsive
     opacity: 0;
   }
 }
-
-/* .map-responsive {
-  overflow: hidden;
-  padding-bottom: 100%;
-  position: relative;
-  height: 0;
-}
-
-.map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-} */
 
 .row iframe {
   border-radius: 5px;
