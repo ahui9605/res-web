@@ -1,0 +1,122 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="my-slider">
+                <img src="assets\images\slide-01.jpg" alt="">
+                <img src="assets\images\slide-02.jpg" alt="">
+                <img src="assets\images\slide-01.jpg" alt="">
+                <img src="assets\images\slide-02.jpg" alt="">
+                <img src="assets\images\slide-03.jpg" alt="">
+                <img src="assets\images\slide-01.jpg" alt="">
+                <img src="assets\images\slide-02.jpg" alt="">
+                <img src="assets\images\slide-02.jpg" alt="">
+                <img src="assets\images\slide-03.jpg" alt="">
+                <img src="assets\images\slide-03.jpg" alt="">
+                <img src="assets\images\slide-03.jpg" alt="">
+                <img src="assets\images\slide-01.jpg" alt="">
+            </div>
+            <div class="button-section">
+                <ul class="control" id="custom-control">
+                    <li class="prev">
+                        <i class="fas fa-angle-left fa"></i>
+                    </li>
+                    <li class="next">
+                        <i class="fas fa-angle-right fa"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var slider = tns({
+            container: '.my-slider',
+            items: 6,
+            gutter: 1, //中间空隙
+            slideBy: 1,
+            //controls: false, //控制大按钮
+            //nav: false //控制按钮
+            mouseDrag: true,
+            autoplay: true,
+            autoplayButtonOutput: false,
+            controlsContainer: "#custom-control",
+            nav: false,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+
+            responsive: {
+                0: {
+                    items: 1
+                },
+                700: {
+                    items: 2
+                },
+                800: {
+                    items: 6
+                }
+            }
+        });
+
+
+
+    </script>
+    <style>
+        .text-block {
+            position: absolute;
+            background-color: red !important;
+            color: white;
+            padding-left: 10px;
+        }
+
+        body,
+        p {
+            background-color: black;
+        }
+
+        .control {
+            list-style: none;
+            text-align: center;
+        }
+
+        .control li {
+            display: inline-block;
+            z-index: 99;
+            top: 50%;
+            color: rgb(255, 255, 255);
+            padding: 12px 20px;
+            margin-right: -4px;
+        }
+
+        .control li.prev:hover {
+            color: rgb(255, 0, 0);
+        }
+
+        .control li.next:hover {
+            color: rgb(255, 0, 0);
+        }
+    </style>
+
+    <script>
+        document.addEventListener('mousedown', function (event) {
+            if (event.detail > 1) {
+                event.preventDefault();
+            }
+        },
+            false);
+    </script>
+</body>
+
+</html>
