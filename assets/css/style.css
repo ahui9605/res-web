@@ -973,7 +973,6 @@ ul.slick-dots {
 about
 ---------------------------------------------
 */
-
 #about {
   margin-top: 20px;
   padding: 100px 0px 0px 0px;
@@ -1008,18 +1007,24 @@ about
   top: 50%;
   width: 70px;
   height: 70px;
-  display: inline-block;
+  display: flex; /* Changed from inline-block */
+  align-items: center; /* Added to center the icon */
+  justify-content: center; /* Added to center the icon */
   line-height: 70px;
-  text-align: center;
   background-color: red;
   color: #fff;
   border-radius: 50%;
-  transform: translate(-35px, -35px);
+  transform: translate(-50%, -50%); /* Changed to center the button */
   transition: all 0.3s;
 }
 
 #about .right-content .thumb a:hover {
   opacity: 0.9;
+}
+
+#about .right-content .thumb .preview-img-size {
+  width: 100%; /* Adjust as needed */
+  height: auto;
 }
 
 /*
@@ -1182,177 +1187,57 @@ menu
   content: "\f105";
 }
 
-/*
----------------------------------------------
-chefs
----------------------------------------------
-*/
-
-#chefs {
-  padding-top: 120px;
-}
-
-#chefs .section-heading {
-  margin-bottom: 70px;
-}
-
-#chefs .section-heading h6 {
-  padding-left: 0px;
-}
-
-#chefs .section-heading h6:before {
-  display: none;
-}
-
-#chefs .chef-item {
-  text-align: center;
-  border: 1px solid #afafaf;
-  padding: 5px;
-  transition: all 0.5s;
-  border-radius: 3px;
-}
-
-#chefs .chef-item:hover {
-  border-color: red;
-}
-
-#chefs .chef-item:hover .down-content h4 {
-  color: red;
-}
-
-#chefs .chef-item .thumb {
-  position: relative;
-}
-
-#chefs .chef-item .thumb img {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-#chefs .chef-item .thumb .overlay {
-  position: absolute;
-  background-color: #2a2a2a;
-  border-radius: 3px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-}
-
-#chefs .chef-item .thumb ul.social-icons {
-  position: absolute;
-  z-index: 11;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  transition: all 0.5s;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#chefs .chef-item .thumb ul.social-icons li {
-  display: inline-block;
-  margin: 0px 5px;
-}
-
-#chefs .chef-item .thumb ul.social-icons li a {
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  color: #2a2a2a;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
-  display: inline-block;
-  transition: all 0.5s;
-}
-
-#chefs .chef-item .thumb ul.social-icons li a:hover {
-  background-color: red;
-}
-
-#chefs .chef-item:hover .overlay {
-  opacity: 0.9;
-  visibility: visible;
-}
-
-#chefs .chef-item:hover ul.social-icons {
-  opacity: 1;
-  visibility: visible;
-}
-
-#chefs .chef-item .down-content {
-  padding: 20px 0px;
-}
-
-#chefs .chef-item .down-content h4 {
-  transition: all 0.3s;
-  font-size: 20px;
-  font-weight: 700;
-  color: #2a2a2a;
-}
-
-#chefs .chef-item .down-content span {
-  font-size: 14px;
-  color: #2a2a2a;
-}
-
 /* 
 ---------------------------------------------
 reservation
 --------------------------------------------- 
 */
 
-#reservation .section-heading {
+#contact-us .section-heading {
   margin-bottom: 30px;
 }
 
-#reservation .section-heading h6 {
+#contact-us .section-heading h6 {
   color: red;
 }
 
-#reservation .section-heading h2 {
+#contact-us .section-heading h2 {
   color: #fff;
   font-weight: 700;
 }
 
-#reservation .section-heading h6:before {
+#contact-us .section-heading h6:before {
   background-color: red;
 }
 
-#reservation p {
+#contact-us p {
   color: #fff;
   margin-bottom: 65px;
 }
 
-#reservation {
+#contact-us {
   margin-top: 20px;
   padding: 50px 0px;
-  background-image: url(../images/reservation-bg.jpg);
+  background-image: url(../images/contact-us-bg.jpg); /* Updated image path */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#reservation .message {
+#contact-us .message {
   margin-right: 0px;
 }
-#reservation .phone,
-#reservation .message {
+
+#contact-us .phone,
+#contact-us .message {
   background-color: #fff;
   border-radius: 5px;
   text-align: center;
   padding: 0px 0px 20px 0px;
 }
 
-#reservation .phone i,
-#reservation .message i {
+#contact-us .phone i,
+#contact-us .message i {
   width: 70px;
   height: 70px;
   display: inline-block;
@@ -1368,23 +1253,23 @@ reservation
   margin-right: auto;
 }
 
-#reservation .phone h4,
-#reservation .message h4 {
+#contact-us .phone h4,
+#contact-us .message h4 {
   font-size: 20px;
   font-weight: 700;
   margin-top: 15px;
   margin-bottom: 10px;
 }
 
-#reservation .phone span a,
-#reservation .message span a {
+#contact-us .phone span a,
+#contact-us .message span a {
   font-size: 14px;
   color: #2a2a2a;
   transition: all 0.3s;
 }
 
-#reservation .phone span a:hover,
-#reservation .message span a:hover {
+#contact-us .phone span a:hover,
+#contact-us .message span a:hover {
   color: red;
 }
 
